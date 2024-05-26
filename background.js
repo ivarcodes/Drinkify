@@ -17,11 +17,13 @@ function showNotification() {
 if (!("Notification" in window)) {
     alert("This browser does not support desktop notifications.");
 } else if (Notification.permission === "granted") {
-    intervalId = setInterval(showNotification, 40*60*1000);
+    // For demo purposes, the timer is set to 6 seconds, the timer would be set for every 40 minutes.
+
+    intervalId = setInterval(showNotification, 6000);
 } else if (Notification.permission !== "denied") {
     Notification.requestPermission().then(permission => {
         if (permission === "granted") {
-            intervalId = setInterval(showNotification, 40*60*1000);
+            intervalId = setInterval(showNotification, 6000);
         } else {
             permissionDenied = true;
         }
