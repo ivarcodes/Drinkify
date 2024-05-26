@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Drinkify",
+    "version": "1.0",
+    "description": "A simple browser extension to remind you to drink water.",
+    "permissions": ["notifications"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "icons": {
+      "128": "water.png"
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "128": "water.png"
+      }
+    }
+  }
+  
